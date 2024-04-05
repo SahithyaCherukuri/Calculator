@@ -1,0 +1,43 @@
+version: '3'
+
+services:
+  frontend:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - /my-volume
+    command: python app.py
+
+  plus_service:
+    image: plus_image
+    ports:
+      - "5001:5001"
+    volumes:
+      - /my-volume
+  
+  minus_service:
+    image: minus_image
+    ports:
+      - "5002:5002"
+    volumes:
+      - /my-volume
+
+  multiply_service:
+    image: multiply_image
+    ports:
+      - "5003:5003"
+    volumes:
+      - /my-volume
+  
+  divide_service:
+    image: divide_image
+    ports:
+      - "5004:5004"
+    volumes:
+      - /my-volume
+
+
+volumes:
+  my-volume:
+    

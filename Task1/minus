@@ -1,0 +1,15 @@
+import sys
+
+
+def minus():
+    if len(sys.argv) > 2:
+        x = int(sys.argv[1])
+        y = int(sys.argv[2])       
+    else:
+        x = int(sys.argv[1])
+        y = int(input())    
+    print(y - x)
+
+
+if __name__ == '__main__':
+    minus()
